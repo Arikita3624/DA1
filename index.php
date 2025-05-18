@@ -10,6 +10,7 @@ require_once './controllers/shop-grid/ProductsController.php';
 require_once './controllers/cart-controller/CartItemsController.php';
 require_once './controllers/blog-controller/BlogControllers.php';
 require_once './controllers/contact-controller/ContactController.php';
+require_once './controllers/auth-controller/AuthController.php';
 
 // Require toàn bộ file Models
 
@@ -28,6 +29,8 @@ match ($act) {
     'blogs' => (new BlogControllers())->index(),
     'blog-detail' => (new BlogDetailController())->index(),
     'contact' => (new ContactController())->index(),
+    'login' => (new SignInController())->index(),
+    'register' => (new SignUpController())->index(),
     default => (new HomeController())->index(),
 };
 

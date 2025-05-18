@@ -1,12 +1,3 @@
-/******************************************************************
-  Template Name: Ogani
-  Description:  Ogani eCommerce  HTML Template
-  Author: Colorlib
-  Author URI: https://colorlib.com
-  Version: 1.0
-  Created: Colorlib
-******************************************************************/
-
 /*------------------------------------------------------------------
 [Table of contents]
 
@@ -23,7 +14,115 @@
 7.  Featured Section
 8.  Latest Product Section
 9.  Contact
-10.  Footer Style
+10. Footer Style.auth-page .auth-container {
+    max-width: 400px;
+    margin: 80px auto;
+    padding: 30px;
+    background: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    font-family: "Cairo", sans-serif;
+}
+
+.auth-page .auth-container h2 {
+    font-size: 24px;
+    font-weight: 700;
+    color: #1c1c1c;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.auth-page .auth-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.auth-page .auth-form .form-group {
+    margin-bottom: 15px;
+}
+
+.auth-page .auth-form .form-group label {
+    font-size: 16px;
+    color: #1c1c1c;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.auth-page .auth-input {
+    width: 100%;
+    height: 40px;
+    padding: 10px;
+    font-size: 16px;
+    color: #6f6f6f;
+    border: 1px solid #ebebeb;
+    border-radius: 4px;
+    transition: border-color 0.3s ease;
+}
+
+.auth-page .auth-input:focus {
+    border-color: #7fad39;
+}
+
+.auth-page .auth-button {
+    font-size: 14px;
+    color: #ffffff;
+    font-weight: 700;
+    text-transform: uppercase;
+    background: #7fad39;
+    border: none;
+    padding: 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    margin-top: 10px;
+}
+
+.auth-page .auth-button:hover {
+    background: #6a9431;
+}
+
+.auth-page .auth-link {
+    text-align: center;
+    margin-top: 15px;
+}
+
+.auth-page .auth-link a {
+    font-size: 14px;
+    color: #7fad39;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.auth-page .auth-link a:hover {
+    color: #6a9431;
+}
+
+/* Responsive Design for Authentication */
+@media only screen and (max-width: 479px) {
+    .auth-page .auth-container {
+        max-width: 100%;
+        margin: 40px 15px;
+        padding: 20px;
+    }
+
+    .auth-page .auth-container h2 {
+        font-size: 20px;
+    }
+
+    .auth-page .auth-input {
+        height: 36px;
+        font-size: 14px;
+    }
+
+    .auth-page .auth-button {
+        font-size: 12px;
+        padding: 10px;
+    }
+
+    .auth-page .auth-link a {
+        font-size: 12px;
+    }
+}
 -------------------------------------------------------------------*/
 
 /*----------------------------------------*/
@@ -3092,83 +3191,54 @@ ol {
 		margin-right: 0;
 		margin-bottom: 20px;
 	}
+/* [Previous content before .humberger__menu__wrapper .slicknav_btn remains unchanged] */
+
 	.humberger__menu__wrapper .slicknav_btn {
 		display: none;
 	}
-	.humberger__menu__wrapper .slicknav_nav .slicknav_item a {
-		border-bottom: none !important;
+	.humberger__menu__wrapper .slicknav_menu {
+		display: block;
 	}
 	.humberger__menu__wrapper .slicknav_nav {
 		display: block !important;
 	}
-	.humberger__menu__wrapper .slicknav_menu {
-		background: transparent;
-		padding: 0;
-		margin-bottom: 30px;
+	.humberger__menu__wrapper .slicknav_nav li {
+		list-style: none;
 	}
-	.humberger__menu__wrapper .slicknav_nav ul {
-		margin: 0;
-	}
-	.humberger__menu__wrapper .slicknav_nav a {
-		color: #1c1c1c;
+	.humberger__menu__wrapper .slicknav_nav li a {
 		font-size: 16px;
-		font-weight: 600;
-		margin: 0;
-		border-bottom: 1px solid #e1e1e1;
+		color: #1c1c1c;
+		padding: 10px 0;
+		display: block;
+		-webkit-transition: all, 0.3s;
+		-moz-transition: all, 0.3s;
+		-ms-transition: all, 0.3s;
+		-o-transition: all, 0.3s;
+		transition: all, 0.3s;
 	}
-	.humberger__menu__wrapper .slicknav_nav a:hover {
-		-webkit-border-radius: 0;
-		border-radius: 0;
-		background: transparent;
+	.humberger__menu__wrapper .slicknav_nav li a:hover {
 		color: #7fad39;
 	}
-	.humberger__menu__wrapper .slicknav_nav .slicknav_row,
-	.humberger__menu__wrapper .slicknav_nav a {
-		padding: 8px 0;
-	}
-	.humberger__menu__overlay {
-		position: fixed;
-		left: 0;
-		top: 0;
-		height: 100%;
-		width: 100%;
-		background: rgba(0, 0, 0, 0.5);
-		content: "";
-		z-index: 98;
-		visibility: hidden;
-		-webkit-transition: all, 0.6s;
-		-moz-transition: all, 0.6s;
-		-ms-transition: all, 0.6s;
-		-o-transition: all, 0.6s;
-		transition: all, 0.6s;
-	}
-	.humberger__menu__overlay.active {
-		visibility: visible;
-	}
-	.header__top {
+	.header__top__right__social {
 		display: none;
 	}
 	.header__menu {
 		display: none;
 	}
 	.header__cart {
-		text-align: center;
-		padding: 10px 0 24px;
+		display: none;
 	}
-	.over_hid {
-		overflow: hidden;
+	.header__top__right__language {
+		display: none;
+	}
+	.header__top__right__auth {
+		display: none;
 	}
 }
 
 /* Wide Mobile = 480px */
 
 @media only screen and (max-width: 767px) {
-	.hero__categories {
-		margin-bottom: 30px;
-	}
-	.hero__search {
-		margin-bottom: 30px;
-	}
 	.hero__search__form {
 		width: 100%;
 	}
@@ -3179,40 +3249,39 @@ ol {
 		display: none;
 	}
 	.hero__search__phone {
-		float: left;
-		margin-top: 30px;
+		display: none;
 	}
-	.categories__slider.owl-carousel .owl-nav {
-		text-align: center;
-		margin-top: 40px;
+	.hero__item {
+		height: auto;
+		padding-top: 120px;
+		padding-bottom: 70px;
 	}
 	.categories__slider.owl-carousel .owl-nav button {
-		position: relative;
-		left: 0;
-		top: 0;
-		-webkit-transform: translateY(0);
+		left: -10px;
 	}
 	.categories__slider.owl-carousel .owl-nav button.owl-next {
 		right: -10px;
 	}
-	.footer__copyright {
-		text-align: center;
-	}
 	.footer__copyright__text {
 		float: none;
-		margin-bottom: 25px;
+		text-align: center;
+		margin-bottom: 10px;
 	}
 	.footer__copyright__payment {
 		float: none;
-	}
-	.filter__item {
 		text-align: center;
+	}
+	.footer__copyright__payment img {
+		width: 50%;
+	}
+	.filter__sort {
+		text-align: left;
+	}
+	.filter__found {
+		text-align: left;
 	}
 	.filter__option {
-		text-align: center;
-	}
-	.product__details__pic {
-		margin-bottom: 40px;
+		text-align: left;
 	}
 	.product__details__tab .nav-tabs:before {
 		display: none;
@@ -3220,11 +3289,14 @@ ol {
 	.product__details__tab .nav-tabs:after {
 		display: none;
 	}
-	.shoping__cart__table {
-		overflow-y: auto;
+	.shoping__cart__table table tbody tr td.shoping__cart__item {
+		width: 400px;
 	}
-	.shoping__discount form input {
-		margin-bottom: 15px;
+	.shoping__cart__table table tbody tr td.shoping__cart__item img {
+		margin-bottom: 10px;
+	}
+	.shoping__cart__table table tbody tr td.shoping__cart__item h5 {
+		display: block;
 	}
 	.blog__details__author {
 		overflow: hidden;
@@ -3350,119 +3422,165 @@ ol {
 		margin-right: 0;
 		margin-bottom: 20px;
 	}
-	.humberger__menu__wrapper .slicknav_btn {
-		display: none;
-	}
-	.humberger__menu__wrapper .slicknav_nav .slicknav_item a {
-		border-bottom: none !important;
-	}
-	.humberger__menu__wrapper .slicknav_nav {
-		display: block !important;
-	}
-	.humberger__menu__wrapper .slicknav_menu {
-		background: transparent;
-		padding: 0;
-		margin-bottom: 30px;
-	}
-	.humberger__menu__wrapper .slicknav_nav ul {
-		margin: 0;
-	}
-	.humberger__menu__wrapper .slicknav_nav a {
-		color: #1c1c1c;
-		font-size: 16px;
-		font-weight: 600;
-		margin: 0;
-		border-bottom: 1px solid #e1e1e1;
-	}
-	.humberger__menu__wrapper .slicknav_nav a:hover {
-		-webkit-border-radius: 0;
-		border-radius: 0;
-		background: transparent;
-		color: #7fad39;
-	}
-	.humberger__menu__wrapper .slicknav_nav .slicknav_row,
-	.humberger__menu__wrapper .slicknav_nav a {
-		padding: 8px 0;
-	}
-	.humberger__menu__overlay {
-		position: fixed;
-		left: 0;
-		top: 0;
-		height: 100%;
-		width: 100%;
-		background: rgba(0, 0, 0, 0.5);
-		content: "";
-		z-index: 98;
-		visibility: hidden;
-		-webkit-transition: all, 0.6s;
-		-moz-transition: all, 0.6s;
-		-ms-transition: all, 0.6s;
-		-o-transition: all, 0.6s;
-		transition: all, 0.6s;
-	}
-	.humberger__menu__overlay.active {
-		visibility: visible;
-	}
-	.header__top {
+	.header__top__right__social {
 		display: none;
 	}
 	.header__menu {
 		display: none;
 	}
 	.header__cart {
-		text-align: center;
-		padding: 10px 0 24px;
+		display: none;
 	}
-	.over_hid {
-		overflow: hidden;
+	.header__top__right__language {
+		display: none;
+	}
+	.header__top__right__auth {
+		display: none;
 	}
 }
 
-/* Small Device = 320px */
+/* Small Device = 479px */
 
 @media only screen and (max-width: 479px) {
+	.hero__search__form {
+		width: 100%;
+	}
+	.hero__search__form form input {
+		width: 100%;
+	}
 	.hero__search__form form .hero__search__categories {
 		display: none;
 	}
-	.featured__controls ul li {
-		margin-bottom: 10px;
+	.hero__item {
+		height: auto;
+		padding-top: 100px;
+		padding-bottom: 40px;
+		padding-left: 25px;
 	}
-	.product__details__text ul li b {
-		width: 100px;
+	.categories__slider.owl-carousel .owl-nav button {
+		left: 0;
 	}
-	.product__details__tab .nav-tabs li {
-		margin-right: 20px;
+	.categories__slider.owl-carousel .owl-nav button.owl-next {
+		right: 0;
 	}
-	.shoping__cart__btns {
-		text-align: center;
+	.humberger__menu__wrapper {
+		width: 270px;
 	}
-	.primary-btn.cart-btn.cart-btn-right {
-		float: none;
-		margin-top: 10px;
-	}
-	.shoping__checkout .primary-btn {
-		display: block;
-		text-align: center;
-		padding: 10px 15px 10px;
-	}
-	.map .map-inside {
-		-webkit-transform: translateX(-125px);
-		-ms-transform: translateX(-125px);
-		transform: translateX(-125px);
-	}
-	.map .map-inside .inside-widget {
+	.shoping__cart__table table tbody tr td.shoping__cart__item {
 		width: 250px;
 	}
-	.product__details__tab .nav-tabs li {
-		margin-right: 15px;
-	}
-	.shoping__discount form input {
-		width: 100%;
-	}
-	.checkout__order {
-		padding: 20px;
-	}
-	.blog__details__hero__text h2 {
-		font-size: 24px;
-	}
+}
+
+/*---------------------
+  Authentication (Login & Register)
+-----------------------*/
+
+.auth-container {
+    max-width: 400px;
+    margin: 80px auto;
+    padding: 30px;
+    background: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    font-family: "Cairo", sans-serif;
+}
+
+.auth-container h2 {
+    font-size: 24px;
+    font-weight: 700;
+    color: #1c1c1c;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.auth-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.auth-form .form-group {
+    margin-bottom: 15px;
+}
+
+.auth-form .form-group label {
+    font-size: 16px;
+    color: #1c1c1c;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.auth-input {
+    width: 100%;
+    height: 40px;
+    padding: 10px;
+    font-size: 16px;
+    color: #6f6f6f;
+    border: 1px solid #ebebeb;
+    border-radius: 4px;
+    transition: border-color 0.3s ease;
+}
+
+.auth-input:focus {
+    border-color: #7fad39;
+}
+
+.auth-button {
+    font-size: 14px;
+    color: #ffffff;
+    font-weight: 700;
+    text-transform: uppercase;
+    background: #7fad39;
+    border: none;
+    padding: 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    margin-top: 10px;
+}
+
+.auth-button:hover {
+    background: #6a9431;
+}
+
+.auth-link {
+    text-align: center;
+    margin-top: 15px;
+}
+
+.auth-link a {
+    font-size: 14px;
+    color: #7fad39;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.auth-link a:hover {
+    color: #6a9431;
+}
+
+/* Responsive Design for Authentication */
+@media only screen and (max-width: 479px) {
+    .auth-container {
+        max-width: 100%;
+        margin: 40px 15px;
+        padding: 20px;
+    }
+
+    .auth-container h2 {
+        font-size: 20px;
+    }
+
+    .auth-input {
+        height: 36px;
+        font-size: 14px;
+    }
+
+    .auth-button {
+        font-size: 12px;
+        padding: 10px;
+    }
+
+    .auth-link a {
+        font-size: 12px;
+    }
 }
