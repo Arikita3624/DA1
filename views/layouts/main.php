@@ -3,7 +3,6 @@ require_once("./views/header_footer/Header.php");
 
 global $content;
 
-// Thông báo lỗi hoặc thành công
 if (isset($_SESSION['success'])): ?>
     <div class="alert alert-success" id="alert-box" style="background-color: #e6ffe6; color: #006600; padding: 10px; margin: 15px auto; border-radius: 5px; width: 90%; max-width: 600px;">
         <?= htmlspecialchars($_SESSION['success']) ?>

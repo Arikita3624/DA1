@@ -1,0 +1,113 @@
+
+/*# sourceMappingURL=custom.min.css.map */
+/* Style cho bảng */
+.table {
+    width: 100%;
+    max-width: 100%;
+    margin: 20px 0;
+    font-family: "Cairo", sans-serif;
+    border-collapse: collapse;
+}
+
+.table-rounded {
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+.table table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.table thead {
+    background-color: #7fad39; /* Màu xanh lá từ template Ogani */
+    color: #ffffff;
+}
+
+.table thead th {
+    padding: 12px 15px;
+    text-align: left;
+    font-size: 16px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.table tbody tr {
+    border-bottom: 1px solid #ebebeb;
+    transition: background 0.3s ease;
+}
+
+.table tbody tr:hover {
+    background-color: #f9f9f9;
+}
+
+.table tbody td {
+    padding: 12px 15px;
+    font-size: 14px;
+    color: #6f6f6f;
+    vertical-align: middle;
+}
+
+.table tbody td img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+.table tbody td button {
+    padding: 6px 12px;
+    font-size: 14px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.btn-primary {
+    background-color: #007bff;
+    color: #ffffff;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+}
+
+.btn-danger {
+    background-color: #dc3545;
+    color: #ffffff;
+    margin-left: 5px;
+}
+
+.btn-danger:hover {
+    background-color: #b02a37;
+}
+
+/* Responsive cho bảng */
+@media only screen and (max-width: 767px) {
+    .table {
+        overflow-x: auto;
+        display: block;
+    }
+
+    .table table {
+        min-width: 600px; /* Đảm bảo bảng không bị co quá nhỏ */
+    }
+
+    .table thead th,
+    .table tbody td {
+        font-size: 12px;
+        padding: 8px 10px;
+    }
+
+    .table tbody td img {
+        width: 60px;
+        height: 60px;
+    }
+
+    .table tbody td button {
+        font-size: 12px;
+        padding: 4px 8px;
+    }
+}
