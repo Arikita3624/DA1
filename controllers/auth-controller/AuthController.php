@@ -17,36 +17,36 @@ class SignInController {
             $email = trim($_POST['email'] ?? '');
             $password = trim($_POST['password'] ?? '');
 
-            // Lưu lại dữ liệu người dùng nhập để điền lại nếu sai
+            // Save user input to fill again if invalid
             $_SESSION['form_data'] = [
                 'email' => $email
             ];
 
-            // Kiểm tra dữ liệu
+            // Validate input
             if (empty($email) || empty($password)) {
-                $_SESSION['error'] = "Vui lòng nhập đầy đủ email và mật khẩu.";
+                $_SESSION['error'] = "Please fill in all required fields.";
                 header("Location: ?act=login");
                 exit();
             }
 
             if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-                $_SESSION['error'] = "Email không hợp lệ.";
+                $_SESSION['error'] = "Invalid email format.";
                 header("Location: ?act=login");
                 exit();
             }
 
-            // Kiểm tra tài khoản
+            // Validate account
             $auth = new Auth($conn);
             $user = $auth->login($email, $password);
 
             if ($user) {
                 unset($_SESSION['form_data']);
                 $_SESSION['user'] = $user;
-                $_SESSION['success'] = "Đăng nhập thành công!";
-                header("Location: ?act=/"); // Hoặc chuyển hướng trang chủ, dashboard,...
+                $_SESSION['success'] = "Login successful!";
+                header("Location: ?act=/"); // Or redirect to home page, dashboard,...
                 exit();
             } else {
-                $_SESSION['error'] = "Sai email hoặc mật khẩu.";
+                $_SESSION['error'] = "Invalid email or password.";
                 header("Location: ?act=login");
                 exit();
             }
@@ -128,3 +128,4 @@ class LogoutController {
     }
 }
 ?>
+

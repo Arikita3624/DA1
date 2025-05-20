@@ -2,6 +2,8 @@
 
 class DashboardController {
     public function index() {
-        require_once "./views/dashboard.php";
+        global $content_admin;
+        $content_admin = '../admin/views/dashboard.php';
+        require_once "../admin/views/layouts/main_admin.php";
     }
 }
